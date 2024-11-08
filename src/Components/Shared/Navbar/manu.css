@@ -1,0 +1,62 @@
+.hamburger .line {
+    width: 25px;
+    height: 2px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+#hamburger-menu.is-active {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#hamburger-menu.is-active .line:nth-child(2) {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+#hamburger-menu .line:nth-child(2) {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+
+#hamburger-menu.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger-menu.is-active .line:nth-child(1),
+#hamburger-menu.is-active .line:nth-child(3) {
+    width: 15px;
+    -webkit-transform-origin: right;
+    -moz-transform-origin: right;
+    -ms-transform-origin: right;
+    -o-transform-origin: right;
+    transform-origin: right;
+}
+
+#hamburger-menu.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(7.5px) rotate(45deg);
+    -ms-transform: translateY(7.5px) rotate(45deg);
+    -o-transform: translateY(7.5px) rotate(45deg);
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+#hamburger-menu.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-7.5px) rotate(-45deg);
+    -ms-transform: translateY(-7.5px) rotate(-45deg);
+    -o-transform: translateY(-7.5px) rotate(-45deg);
+    transform: translateY(-7.5px) rotate(-45deg);
+}
